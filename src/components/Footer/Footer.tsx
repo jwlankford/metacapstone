@@ -25,7 +25,7 @@ export const Footer = () => {
         <h4>
           Menu
         </h4>
-        <nav className="Navigation FooterNavigation">
+        <nav>
           <ul>
             {navigation.map(({ id, title, link }) => {
                 return (
