@@ -1,0 +1,13 @@
+#SocialMedia ul {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.SocialIcon {
+  height: 25px;
+}
+
+.SocialIcon:hover {
+  transform: scale(1.5);
+}

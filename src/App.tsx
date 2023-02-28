@@ -1,21 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  Routes,
+  Route
+} from "react-router-dom";
+
+// components
+import Header from './components/Header/Header';
+import { Footer } from './components/Footer/index';
+import HomePage from './components/Home/Home';
+import BookingPage from './components/BookingPage/BookingPage';
 
 function App() {
   return (
     <div className="App">
-      <header>Header
-        <nav>
-            <ul className="menu">
-                <li className="menu-item"><a href="/">Home</a></li>
-                <li className="menu-item"><a href="/about">About</a></li> 
-                <li className="menu-item"><a href="/contact">Contact</a></li> 
-            </ul>
-        </nav>
-        </header>
-        <main>Main</main>
-        <footer>Footer</footer>
+        <Header></Header>
+          <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/booking" element={<BookingPage />}></Route>
+          </Routes>
+        <Footer></Footer>
     </div>
   );
 }
